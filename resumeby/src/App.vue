@@ -15,12 +15,15 @@
 
     <el-row type="flex" class="row-bg" justify="center" style="position:relative;top:60px;">
       <el-col :span="11">
-          <div class="grid-content bg-purple" style="text-align:right">
-            <!-- <el-tag style="margin-top:5px;" type="gray">2014-10~2015-07</el-tag>
-            <el-tag type="warning">青岛联创优内科技有限公司</el-tag>
-            <el-tag type="primary">.NET开发</el-tag>
-            <el-tag type="success">iOS开发</el-tag> -->
-          </div>
+        <div class="" style="text-align:right;">
+          <img src="./assets/person.png" style="width:24px;">
+        </div>
+        <div class="grid-content bg-purple" style="text-align:right">
+          <!-- <el-tag style="margin-top:5px;" type="gray">2014-10~2015-07</el-tag>
+          <el-tag type="warning">青岛联创优内科技有限公司</el-tag>
+          <el-tag type="primary">.NET开发</el-tag>
+          <el-tag type="success">iOS开发</el-tag> -->
+        </div>
       </el-col>
       <el-col :span="2">
         <div class="" style="text-align:center">
@@ -29,6 +32,9 @@
         </div>
       </el-col>
       <el-col :span="11">
+        <div class="">
+          <img src="./assets/person.png">
+        </div>
         <div class="grid-content bg-purple">
           <p style="margin-top:10px;color:#FFA500">2014-10~2015-07</p>
           <el-tag type="warning">青岛联创优内科技有限公司</el-tag>
@@ -97,6 +103,10 @@ export default {
 .bg {
   background-image: url("./assets/bg1.png");
   background-position: center;
+
+}
+
+.icon_person {
 
 }
 
