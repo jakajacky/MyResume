@@ -16,7 +16,24 @@
     <el-row type="flex" class="row-bg" justify="center" style="position:relative;top:60px;">
       <el-col :span="11">
         <div class="" style="text-align:right;">
-          <img src="./assets/person.png" style="width:24px;">
+          <el-row type="flex" justify="end" style="margin-top:9px;">
+            <el-col :span="2">
+              <img src="./assets/person.png" style="width:24px;">
+            </el-col>
+            <el-col :span="4">
+              <span>张小强</span>
+            <el-col>
+          </el-row>
+        </div>
+        <div class="" style="text-align:right;">
+          <el-row type="flex" justify="end" style="margin-top:9px;">
+            <el-col :span="2">
+              <img src="./assets/location.png" style="width:24px;">
+            </el-col>
+            <el-col :span="4">
+              <span>北京昌平</span>
+            <el-col>
+          </el-row>
         </div>
         <div class="grid-content bg-purple" style="text-align:right">
           <!-- <el-tag style="margin-top:5px;" type="gray">2014-10~2015-07</el-tag>
@@ -32,9 +49,28 @@
         </div>
       </el-col>
       <el-col :span="11">
-        <div class="">
-          <img src="./assets/person.png">
+        <div class="" style="text-align:left;">
+          <el-row type="flex" justify="start" style="margin-top:9px;">
+            <el-col :span="2">
+              <img src="./assets/phone.png" style="width:24px;">
+            </el-col>
+            <el-col :span="4">
+              <span>18515982821</span>
+            <el-col>
+          </el-row>
         </div>
+        <div class="" style="text-align:left;">
+          <el-row type="flex" justify="start" style="margin-top:9px;">
+            <el-col :span="2">
+              <img src="./assets/mail.png" style="width:24px;">
+            </el-col>
+            <el-col :span="4">
+              <span>zhangxiaoqiangjoe@gmail.com</span>
+            <el-col>
+          </el-row>
+
+        </div>
+
         <div class="grid-content bg-purple">
           <p style="margin-top:10px;color:#FFA500">2014-10~2015-07</p>
           <el-tag type="warning">青岛联创优内科技有限公司</el-tag>
