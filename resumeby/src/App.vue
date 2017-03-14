@@ -75,21 +75,30 @@
           <el-tag type="warning">北京班德尔科技有限公司</el-tag>
           <el-tag type="success">iOS开发</el-tag>
           <el-card class="box-card">
-            <p><font color=#FFA500>|</font> 构建帮助医药企业精准定位目标医生的移动化SFA管理工具</p>
-            <p><font color=#FFA500>|</font> 杨森LOC销售统计图表模块 Vue+ECharts重构</p>
-            <p><font color=#FFA500>|</font> 发起并负责Jenkins+蒲公英自动化构建公司iOS项目</p>
-            <p><font color=#FFA500>|</font> 使用蒲公英API，设计完成公司内部应用下载平台IDB Store</p>
-            <p><font color=#FFA500>|</font> 葛兰素史克（以下简称GSK）HTTP/1.1后，完成与后台的HTTPS双向认证</p>
-            <p><font color=#FFA500>|</font> 针对GSK新增安全测试，将GSK的项目作代码混淆处理，增加反编译难度</p>
-            <p><font color=#FFA500>|</font> 重写公司所有项目使用的视频课程播放器，使用AVPlayer，支持画中画</p>
-            <p><font color=#FFA500>|</font> 百度地图后台持续定位失败后的解决方案</p>
-            <p><font color=#FFA500>|</font> 为Synapse平台设计完成公司内部直播推流测试工具</p>
-            <p><font color=#FFA500>|</font> Novo Nordisk（以下简称NN）所有大区APP升级64位</p>
-            <p><font color=#FFA500>|</font> NN 美洲区APP国际化功能更新</p>
-            <p><font color=#FFA500>|</font> SQLite数据库迁移</p>
-            <p><font color=#FFA500>|</font> 使用SQLCipher对所有项目本地数据库加密</p>
-            <p><font color=#FFA500>|</font> GSK、NN、杨森的产品升级和维护</p>
-            <p><font color=#FFA500>|</font> 肿么办 V1.0开发</p>
+            <div slot="header" class="clearfix">
+              <span style="line-height: 36px;"><font color=#FFA500>|</font> 构建帮助医药企业精准定位目标医生的移动化SFA管理工具</span>
+              <el-button style="float: right;" type="text" icon="more" @click="showDetail"></el-button>
+            </div>
+            <transition name="fade">
+              <div class="" v-show="show">
+                <p><font color=#FFA500>|</font> 构建帮助医药企业精准定位目标医生的移动化SFA管理工具</p>
+                <p><font color=#FFA500>|</font> 杨森LOC销售统计图表模块 Vue+ECharts重构</p>
+                <p><font color=#FFA500>|</font> 发起并负责Jenkins+蒲公英自动化构建公司iOS项目</p>
+                <p><font color=#FFA500>|</font> 使用蒲公英API，设计完成公司内部应用下载平台IDB Store</p>
+                <p><font color=#FFA500>|</font> 葛兰素史克（以下简称GSK）HTTP/1.1后，完成与后台的HTTPS双向认证</p>
+                <p><font color=#FFA500>|</font> 针对GSK新增安全测试，将GSK的项目作代码混淆处理，增加反编译难度</p>
+                <p><font color=#FFA500>|</font> 重写公司所有项目使用的视频课程播放器，使用AVPlayer，支持画中画</p>
+                <p><font color=#FFA500>|</font> 百度地图后台持续定位失败后的解决方案</p>
+                <p><font color=#FFA500>|</font> 为Synapse平台设计完成公司内部直播推流测试工具</p>
+                <p><font color=#FFA500>|</font> Novo Nordisk（以下简称NN）所有大区APP升级64位</p>
+                <p><font color=#FFA500>|</font> NN 美洲区APP国际化功能更新</p>
+                <p><font color=#FFA500>|</font> SQLite数据库迁移</p>
+                <p><font color=#FFA500>|</font> 使用SQLCipher对所有项目本地数据库加密</p>
+                <p><font color=#FFA500>|</font> GSK、NN、杨森的产品升级和维护</p>
+                <p><font color=#FFA500>|</font> 肿么办 V1.0开发</p>
+              </div>
+          </transition>
+
           </el-card>
 
         </div>
@@ -112,7 +121,15 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      show:false,
+    }
+  },
+  methods: {
+    showDetail:function(event) {
+      console.log(event);
+      this.show = !this.show
+      this.$forceUpdate()
     }
   },
   mounted:function () {
@@ -181,6 +198,26 @@ export default {
   width: 100%;
   margin-top: 10px;
 }
+
+/*过度动画*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .25s ease-out
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+/*.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  padding-left: 10px;
+  opacity: 0;
+}*/
 
 h1, h2 {
   font-weight: normal;
